@@ -26,7 +26,7 @@ getBanksWithAccounts =
 
 module.exports =
     bank:
-        all: allByName
+        allByName: allByName
         byUuid: byUuid
     bankaccess:
         all: americano.defaultRequests.all
@@ -34,7 +34,7 @@ module.exports =
         allLike: allAccessesLike
 
     bankaccount:
-        all: allByTitle
+        allNyTitle: allByTitle
         allByBankAccess: allByBankAccess
         allByBank: allByBank
         bankWithAccounts: getBanksWithAccounts

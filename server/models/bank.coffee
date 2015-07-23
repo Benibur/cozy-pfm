@@ -8,7 +8,7 @@ module.exports = Bank = americano.getModel 'bank',
     uuid: String
 
 Bank.all = (callback) ->
-    Bank.request "all", callback
+    Bank.request "allByName", callback
 
 Bank.getBanksWithAccounts = (callback) ->
     params = group: true
