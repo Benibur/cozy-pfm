@@ -13,7 +13,7 @@ module.exports = BankAccount = americano.getModel 'bankaccount',
     lastChecked: Date
 
 BankAccount.all = (callback) ->
-    BankAccount.request "all", (err, accounts) ->
+    BankAccount.request "allByTitle", (err, accounts) ->
         BankAccount.calculateBalance accounts, callback
 
 BankAccount.allFromBank = (bank, callback) ->
@@ -26,7 +26,7 @@ BankAccount.findMany = (accountIDs, callback) ->
     ids = []
     ids.push accountID for accountID in accountIDs
     params = key: ids
-    BankAccount.request "all", (err, accounts) ->
+    BankAccount.request "allByTitle", (err, accounts) ->
         BankAccount.calculateBalance accounts, callback
 
 BankAccount.allFromBankAccess = (bankAccess, callback) ->
